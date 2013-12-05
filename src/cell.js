@@ -975,6 +975,10 @@ var SelectCell = Backgrid.SelectCell = Cell.extend({
         }
       }
 
+      if (selectedText.length === 0) {
+        selectedText = rawData;
+      }
+
       this.$el.append(selectedText.join(this.delimiter));
     }
     catch (ex) {
